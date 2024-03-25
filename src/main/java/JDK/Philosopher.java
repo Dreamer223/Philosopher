@@ -33,7 +33,7 @@ public class Philosopher extends Thread {
     }
 
     public void think() throws InterruptedException {
-        Thread.sleep(random.nextInt(2000));
+        sleep(random.nextInt(2000));
     }
 
 
@@ -45,9 +45,9 @@ public class Philosopher extends Thread {
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-            System.out.println("Наелся до отвала " + name);
-            cdl.countDown();
         }
+        System.out.println("Наелся до отвала " + name);
+        cdl.countDown();
     }
 }
 

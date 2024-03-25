@@ -55,7 +55,7 @@ public class Table extends Thread {
 
     public void thinkingProgress(){
         for (Philosopher philosopher : philosophers) {
-            philosopher.run();
+            philosopher.start();
         }
     }
 }
